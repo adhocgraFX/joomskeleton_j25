@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>joomskeleton_j25</name>
+	<version>1.0.x</version>
+	<creationDate>2 November 2011</creationDate>
+	<author>Johannes Hock</author>
+	<authorEmail>info@adhocgrafx.de</authorEmail>
+	<authorUrl>http://www.adhocgrafx.de</authorUrl>
+	<copyright>Copyright (C) 2011 Johannes Hock. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<description>
+		<![CDATA[<h1>JoomSkeleton 2.5</h1>
+			<h2>a responsive Joomla! template</h2>
+			<p>&copy; 2011 <a href="http://www.adhocgrafx.de" target="_blank">adhocgraFX</a></p>
+			<p><img src="../templates/joomskeleton_j25/template_preview.png" /></p>
+			<h2>Modulpositionen</h2>
+			<ul>
+			<li>nav</li>
+			<li>search</li>
+			<li>breadcrumbs</li>
+			<li>slideshow</li>
+			<li>head1, head2, head3</li>
+			<li>left, left_hide, left_tabs, left_slider</li>
+			<li>right, right_hide, right_tabs, right_slider</li>
+			<li>bottom1, bottom2, bottom3</li>
+			<li>nav_bottom</li>
+			<li>footer</li>
+			<li>debug</li>
+			</ul>
+			<p>Created by <a href="http://www.adhocgrafx.de" target="_blank">Johannes Hock | adhocgrafx.de</a>.</p>
+		]]>
+	</description>
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>fonts</folder>
+		<folder>languages</folder>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+	<positions>
+		<position>nav</position>
+		<position>nav_bottom</position>
+		<position>search</position>
+		<position>slideshow</position>
+		<position>breadcrumbs</position>
+		<position>head1</position>
+		<position>head2</position>
+		<position>head3</position>
+		<position>head_tabs</position>
+		<position>left</position>
+		<position>left_hide</position>
+		<position>left_tabs</position>
+		<position>left_slider</position>
+		<position>right</position>
+		<position>right_hide</position>
+		<position>right_tabs</position>
+		<position>right_slider</position>
+		<position>bottom1</position>
+		<position>bottom2</position>
+		<position>bottom3</position>
+		<position>bottom_tabs</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.tpl_joomskeleton_j25.ini</language>
+		<language tag="de-DE">de-DE.tpl_joomskeleton_j25.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="COLORS">
+				<field name="© 2011 adhocgraFX | Johannes Hock" type="spacer" hr="false" />
+				<field name="TPL_JS25_FIELD_SPACER_FONTCOLOR_DESC" type="spacer" hr="false" />
+				<field name="headcolor" type="text" filter="alnum" default="666666" label="TPL_JS25_FIELD_HCOLOR_LABEL" description="TPL_JS25_FIELD_HCOLOR_DESC" size="6" class="color" ></field>
+				<field name="fontcolor" type="text" filter="alnum" default="444444" label="TPL_JS25_FIELD_PCOLOR_LABEL" description="TPL_JS25_FIELD_PCOLOR_DESC" size="6" class="color" ></field>
+				<field name="bodycolor" type="text" filter="alnum" default="f9f9f9" label="TPL_JS25_FIELD_BCOLOR_LABEL" description="TPL_JS25_FIELD_BCOLOR_DESC" size="6" class="color" ></field>
+				<field name="linkcolor" type="text" filter="alnum" default="3c5a82" label="TPL_JS25_FIELD_ACOLOR_LABEL" description="TPL_JS25_FIELD_ACOLOR_DESC" size="6" class="color" ></field>
+				<field name="hovercolor" type="text" filter="alnum" default="5f6e82" label="TPL_JS25_FIELD_OCOLOR_LABEL" description="TPL_JS25_FIELD_OCOLOR_DESC" size="6" class="color" ></field>
+				<field name="tabcolor" type="text" filter="alnum" default="ffffff" label="TPL_JS25_FIELD_TCOLOR_LABEL" description="TPL_JS25_FIELD_TCOLOR_DESC" size="6" class="color" ></field>
+				<field name="tabtextcolor" type="text" filter="alnum" default="444444" label="TPL_JS25_FIELD_TTCOLOR_LABEL" description="TPL_JS25_FIELD_TTCOLOR_DESC" size="6" class="color" ></field>
+			</fieldset>
+			<fieldset name="FONTS">
+				<field name="headfont" type="list" default="text" label="TPL_JS25_FIELD_HFONT_LABEL" description="TPL_JS25_FIELD_HFONT_DESC">
+					<option value='default'>Default - Template default</option>
+					<option value='alegreya'>Alegreya (serif)</option>
+					<option value='andada'>Andada (slab)</option>
+					<option value='bitter'>Bitter (slab)</option>
+					<option value='droid-sans'>Droid Sans</option>
+					<option value='droid-serif'>Droid Serif</option>
+					<option value='gentium-basic'>Gentium (serif)</option>
+					<option value='kaffeesatz'>Yanone Kaffeesatz (sans)</option>
+					<option value='lato'>Lato (sans)</option>
+					<option value='open-sans-condensed'>Open Sans Condensed</option>
+					<option value='open-sans'>Open Sans</option>
+					<option value='pt-sans-narrow'>PT Sans Narrow</option>
+					<option value='pt-sans'>PT Sans</option>
+					<option value='pt-serif'>PT Serif</option>
+					<option value='source-code-pro'>Source Code Pro (slab mono)</option>
+					<option value='source-sans-pro'>Source Sans Pro</option>
+					<option value='ubuntu-condensed'>Ubuntu Condensed (sans)</option>
+					<option value='ubuntu'>Ubuntu (sans)</option>
+					<option value='vollkorn'>Vollkorn (serif)</option>
+				</field>
+				<field name="bodyfont" type="list" default="text" label="TPL_JS25_FIELD_BFONT_LABEL" description="TPL_JS25_FIELD_BFONT_DESC">
+					<option value='default'>Default - Template default</option>
+					<option value='alegreya'>Alegreya (serif)</option>
+					<option value='andada'>Andada (slab)</option>
+					<option value='bitter'>Bitter (slab)</option>
+					<option value='droid-sans'>Droid Sans</option>
+					<option value='droid-serif'>Droid Serif</option>
+					<option value='gentium-basic'>Gentium (serif)</option>
+					<option value='kaffeesatz'>Yanone Kaffeesatz (sans)</option>
+					<option value='lato'>Lato (sans)</option>
+					<option value='open-sans-condensed'>Open Sans Condensed</option>
+					<option value='open-sans'>Open Sans</option>
+					<option value='pt-sans-narrow'>PT Sans Narrow</option>
+					<option value='pt-sans'>PT Sans</option>
+					<option value='pt-serif'>PT Serif</option>
+					<option value='source-code-pro'>Source Code Pro (slab mono)</option>
+					<option value='source-sans-pro'>Source Sans Pro</option>
+					<option value='ubuntu-condensed'>Ubuntu Condensed (sans)</option>
+					<option value='ubuntu'>Ubuntu (sans)</option>
+					<option value='vollkorn'>Vollkorn (serif)</option>
+				</field>
+			</fieldset>
+			<fieldset name="IMAGES">
+				<field name="TPL_JS25_FIELD_SPACER_LOGO_DESC" type="spacer" hr="false" />
+				<field name="logo" type="media" label="TPL_JS25_FIELD_LOGO_LABEL" description="TPL_JS25_FIELD_LOGO_DESC" />
+				<field name="sitetitle" type="text" default="" label="TPL_JS25_FIELD_SITETITLE_LABEL" description="TPL_JS25_FIELD_SITETITLE_DESC" filter="string" />
+				<field name="bodybackground" type="media" label="TPL_JS25_FIELD_BACKIMAGE_LABEL" description="TPL_JS25_FIELD_BACKIMAGE_DESC" />
+			</fieldset>
+			<fieldset name="BUTTONS">
+				<field name="TPL_JS25_FIELD_SPACER_BUTTONS_DESC" type="spacer" hr="false" />
+				<field name="twitterid" type="text" default="" label="TPL_JS25_FIELD_TWITTERID_LABEL" description="TPL_JS25_FIELD_TWITTERID_DESC" filter="alnum" />
+				<field name="googleplus" type="radio" default="0" label="TPL_JS25_FIELD_GOOGLEPLUS_LABEL" description="TPL_JS25_FIELD_GOOGLEPLUS_DESC"> 
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_JS25_FIELD_ANALYTICS_LABEL" description="TPL_JS25_FIELD_ANALYTICS_DESC" size="15" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="Max Wrapper Width" type="spacer" hr="false" />
+				<field name="maxwidth" type="list" default="medium" label="TPL_JS25_FIELD_MWIDTH_LABEL" description="TPL_JS25_FIELD_MWIDTH_DESC" filter="word">
+					<option value="small">TPL_JS25_OPTION_SMALL</option>
+					<option value="medium">TPL_JS25_OPTION_MEDIUM</option>
+					<option value="large">TPL_JS25_OPTION_LARGE</option>
+					<option value="xxl">TPL_JS25_OPTION_XXL</option>
+				</field>
+				<field name="Additional font options" type="spacer" hr="false" />
+				<field name="typesize" type="radio" default="0" label="TPL_JS25_FIELD_TYPESIZE_LABEL" description="TPL_JS25_FIELD_TYPESIZE_DESC"> 
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="modulor" type="radio" default="0" label="TPL_JS25_FIELD_MODULOR_LABEL" description="TPL_JS25_FIELD_MODULOR_DESC"> 
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="fontmobile" type="radio" default="0" label="TPL_JS25_FIELD_FONTMOBILE_LABEL" description="TPL_JS25_FIELD_FONTMOBILE_DESC"> 
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="Slideshow layout" type="spacer" hr="false" />
+				<field name="slidethumb" type="radio" default="0" label="TPL_JS25_FIELD_SLIDETHUMB_LABEL" description="TPL_JS25_FIELD_SLIDETHUMB_DESC"> 
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="Additional grid sort for left, right and main position" type="spacer" hr="false" />
+				<field name="gridsort" type="list" default="text" label="TPL_JS25_FIELD_GSORT_LABEL" description="TPL_JS25_FIELD_GSORT_DESC">
+					<option value='lmr'>left | main| right</option>
+					<option value='mlr'>main | left | right</option>
+					<option value='lrm'>left | right| main</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,944 @@
+/*
+* JoomSkeleton V1.0e
+* Copyright 2012, Johannes Hock
+* www.adhocgrafx.de
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 3/3/2012
+*/
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images + responsive video-container + responsive images
+	#Button + modal button + rounded button
+	#Forms
+	#Table
+/* ==============================================	
+	#Fonts	*/
+
+/* #Reset & Basics (Inspired by Nathan Smith)
+================================================== */
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 100%; /* 100% = 16px - 93.75% = 15px */
+	font: inherit;
+	vertical-align: baseline;
+}
+html, body {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	/*  Override the default (display: inline) for
+  	browsers that do not recognize HTML5 tags.
+	-
+  	IE8 (and lower) requires a shiv:
+  	http://ejohn.org/blog/html5-shiv */
+  	display: block;
+}
+nav select, menu select {
+	display: none;
+	margin: 10px 0;
+}
+b, strong {
+	/* Makes browsers agree.
+  	IE + Opera = font-weight: bold.
+  	Gecko + WebKit = font-weight: bolder. */
+  	font-weight: bold;
+}
+img {
+	color: transparent;
+	font-size: 0;
+	vertical-align: top; /* für icons besser */
+	/* For IE: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+  	-ms-interpolation-mode: bicubic;
+}
+ul, ol {
+	list-style: none;
+}
+li {
+	/* For IE6 + IE7: "display: list-item" keeps bullets from
+  	disappearing if hasLayout is triggered. */
+  	display: list-item;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th, td, caption {
+	font-weight: normal;
+	vertical-align: baseline;
+	text-align: left;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+sub, sup, small {
+	font-size: 75%;
+}
+sub, sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+svg {
+	/* For IE9. Without, occasionally draws shapes
+  	outside the boundaries of <svg> rectangle. */
+  	overflow: hidden;
+}
+* {	/*	für alle elemente	*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* #Basic Styles
+================================================== */
+textarea, pre, code, kbd, samp, var, tt {
+	font-family: "Courier New", Courier;
+}
+body {
+	font-size: 100%; /* 100% = 16px - 93.75% = 15px */
+	line-height: 1.4; /* wird nur noch für abweichungen angegeben */
+	color: #444;
+	background: #f9f9f9;
+	font-family: 'PTSans', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%; /* Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
+}
+/* #Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'OpenSansCond', Helvetica, Arial, sans-serif;
+	color: #666;
+	font-weight: normal;
+	line-height: 1.2;
+	margin-bottom: 0.3em;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-weight: inherit;
+}
+h1 {
+	font-size: 3em; /*  48px */
+}
+h2 {
+	font-size: 2.25em; /*  36px */
+}
+h3 {
+	font-size: 1.625em; /*  26px */
+}
+h4 {
+	font-size: 1.3125em; /*  21px */
+}
+h5 {
+	font-size: 1.125em; /*  18px */
+}
+h6 {
+	font-size: 1em; /* 16px */
+}
+.subheader {
+	color: #666;
+}
+/* font-size: 100% = 16px; line-height: 1.4; siehe body */
+p {
+	margin: 0 0 0.6em 0;
+}
+/* special paragraphs */
+p.bookstyle {
+	text-indent: 3em !important;
+}
+p.bookstyle > * {
+	text-indent: 0;
+}
+p img {
+	margin: 0;
+}
+p.lead {
+	font-size: 112.5%; /* 18px */
+	color: #777;
+}
+p.newspaper-2 {
+	-moz-column-count: 2;
+	-moz-column-gap: 2em;
+	-webkit-column-count: 2;
+	-webkit-column-gap : 2em;
+	-moz-column-rule-color:  #666;
+	-moz-column-rule-style:  dotted;
+	-moz-column-rule-width:  1px;
+	-webkit-column-rule-color:  #666;
+	-webkit-column-rule-style: dotted;
+	-webkit-column-rule-width:  1px;
+}
+p.newspaper-3 {
+	-moz-column-count: 3;
+	-moz-column-gap: 2em;
+	-webkit-column-count: 3;
+	-webkit-column-gap : 2em;
+	-moz-column-rule-color:  #666;
+	-moz-column-rule-style:  dotted;
+	-moz-column-rule-width:  1px;
+	-webkit-column-rule-color:  #666;
+	-webkit-column-rule-style: dotted;
+	-webkit-column-rule-width:  1px;
+}
+p.drop-cap-2:first-letter {
+	float: left;
+	margin: 0;
+	padding: 0.125em 0.125em 0 0;
+	font-size: 3em;
+	line-height: 0.7;
+	text-indent: 0;
+	background: transparent;
+	color: #777;
+}
+p.drop-cap-3:first-letter {
+	float: left;
+	margin: 0;
+	padding: 0.125em 0.125em 0 0;
+	font-size: 5em;
+	line-height: 0.5;
+	text-indent: 0;
+	background: transparent;
+	color: #777;
+}
+p.drop-cap-2, p.drop-cap-3 {
+	text-indent: 0 !important;
+}
+p.highlight {
+	color: #5a1e1e;
+}
+p.dimmed {
+	color: #999;
+}
+p.box, .box {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 1em;
+	margin-bottom: 1em;
+	text-indent: 0 !important;
+}
+.blue, .info { /* blau cool */
+	color: #3c5a82;
+	background: #dce6f0;
+	border: 1px solid #a0b4d2;
+}
+.red2, .alert { /* ullis seite */
+	color: #a64468;
+	background: #f2f2f2;
+	border: 1px solid #d971aa;
+}
+.green, .success {  /* winter in lima  */
+	color: #003c3c;
+	background: #f0ebdc;
+	border: 1px solid #aaa078;
+}
+.yellow, .question { /* sommer in lima */
+	color: #be8c46;
+	background: #ebe6d2;
+	border: 1px solid #f5e1b4;
+}
+.alert:before {
+	content: "\f071";
+}
+.info:before {
+	content: "\f05a";
+}
+.success:before {
+	content: "\f058";
+}
+.question:before {
+	content: "\f059";
+}
+.alert:before, .info:before, .success:before, .question:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	padding: 0 .33em 0 0;
+	font-size: 200%;
+	line-height: 1;
+}
+/* text formats */
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+	color: #666;
+}
+small {
+	font-size: 81.25%; /* 13px */
+}
+big {
+	font-size: 125%; /* 20px */
+}
+/*	Blockquotes  */
+blockquote, blockquote p, q, cite {
+	font-size: 125%; /* 20px */
+	line-height: 1;
+	color: #777;
+	font-style: italic;
+}
+blockquote {
+	padding: 0 1em 1em 1em;
+	margin: 1em;
+	border-left: 6px solid #ddd;
+	border-right: 6px solid #ddd;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+}
+blockquote p:before {
+	content: "\201E";
+	padding-right: .1em;
+	font-size: 2em;
+	line-height: 1;
+}
+blockquote p:after {
+	content: "\201C";
+	padding-left: .1em;
+	font-size: 2em;
+	line-height: 1;
+}
+blockquote cite {
+	display: block;
+	font-size: 100%;
+	line-height: 1;
+	color: #555;
+	text-align: right;
+}
+blockquote cite:before {
+	font-family: FontAwesome;
+	content: "\f06c";
+	font-style:normal;
+	padding-right: .5em;
+	color: #3c5a82;
+}
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited {
+	color: #555;
+}
+hr {
+	border-top: 1px solid #CCC;
+	clear: both;
+	height: 0;
+	margin: 0 0 10px 0;
+}
+hr.clearnav {
+	border: 0px !important;
+}
+/* #Links
+================================================== */
+a, a:visited, img {
+	color: #3c5a82;
+	-webkit-transition: all .4s linear;
+	-moz-transition: all .4s linear;
+	-o-transition: all .4s linear;
+	-ms-transition: all .4s linear;
+	transition: all .4s linear;
+	text-decoration: none !important;
+	outline: 0;
+}
+a:hover, a:focus {
+	color: #5f6e82;
+	-webkit-transition: all .4s linear;
+	-moz-transition: all .4s linear;
+	-o-transition: all .4s linear;
+	-ms-transition: all .4s linear;
+	transition: all .4s linear;
+	text-decoration: none !important;
+}
+p a, p a:visited {
+	line-height: inherit;
+}
+/* #Lists
+================================================== */
+ul, ol {
+	margin-bottom: 1em;
+}
+ul {
+	list-style: none outside;
+}
+ol {
+	list-style: decimal;
+}
+ol, ul.square, ul.circle, ul.disc {
+	margin-left: 2em;
+}
+ul.square {
+	list-style: square outside;
+}
+ul.circle {
+	list-style: circle outside;
+}
+ul.disc {
+	list-style: disc outside;
+}
+ul ul, ul ol, ol ol, ol ul {
+	margin: 0.1em 0 0.4em 2em;
+}
+ul ul li, ul ol li, ol ol li, ol ul li {
+	margin-bottom: 0.4em;
+}
+li {
+	line-height: 1.2;
+	margin-bottom: 0.4em;
+}
+ul.large li {
+	line-height: 1.4;
+}
+li p {
+	line-height: 1.2;
+}
+/*	definition lists	*/
+dl {
+	margin-bottom: 1em;
+}
+dl dt {
+	color: #3c5a82;
+}
+dl dd {
+	font-style: normal;
+}
+article dl dd {
+	font-style: italic;
+	margin-left: 2em !important;
+	text-indent: -2em;
+}
+/*	some font-awesome icons	*/
+ul.leaf li:before, ul.heart-empty li:before, ul.star-empty li:before, ul.bookmark-empty li:before, article dl dd:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	color: #3c5a82;
+	text-indent: -2em;
+	text-align: center;
+}
+ul.leaf, ul.heart-empty, ul.star-empty, ul.bookmark-empty, article dl dd:before {
+	margin-left: 2em;
+}
+ul.leaf li:before {
+	content: "\f06c";
+}
+ul.heart-empty li:before {
+	content: "\f08a";
+}
+ul.star-empty li:before {
+	content: "\f006";
+}
+ul.bookmark-empty li:before {
+	content: "\f097";
+}
+article dl dd:before {
+	content: "\f0da";
+}
+/* code formatting */
+pre, code, kbd, tt, samp, var {
+	font-size:100%;
+}
+pre {
+	line-height:1.5;
+	margin:  0 0 1.5em 0;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre, code {
+	color: #800;
+}
+kbd, samp, var, tt {
+	color: #666;
+	font-weight: bold;
+}
+var, dfn {
+	font-style: italic;
+}
+acronym, abbr {
+	border-bottom: 1px #aaa dotted;
+	font-variant: small-caps;
+	letter-spacing: .07em;
+	cursor: help;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+/* #Images - img skalierbar machen 
+================================================== */
+img, img.scale-with-grid {
+	max-width: 100%;
+	height: auto;
+}
+img.max-image {
+	width: 100%;
+	height: auto;
+}
+img.half-image {
+	width: 50%;
+	height: auto;
+}
+img.third-image {
+	width: 33%;
+	height: auto;
+}
+img.two-thirds-image {
+	width: 66%;
+	height: auto;
+}
+/*	layout img helpers	
+img.left-image {
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px
+}
+img.right-image {
+	float: right;
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+img.center-image {
+	display: block;
+	text-align: center;
+	margin: 10px auto;
+}*/
+/* object and video */
+object, embed {
+	max-width: 100%;
+}
+.video-container {
+	position:relative;
+	margin:0 0 15px 0;
+	padding-bottom:51%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+	border:1px solid #ccc;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+/*  schatten effekte - img in divs mit folgenden klassen einpacken: .vintage .special .special2  */
+/* papierabzug */
+.vintage {
+	max-width: 100%;
+	height: auto;
+	border: 6px solid #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+	-moz-box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+	box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+	margin: 5px 5px 20px 5px;
+}
+.grayscale {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: url(desaturate.svg#grayscale);
+	filter: gray;
+	-webkit-filter: grayscale(1);
+}
+/* untere ecken hochgebogen */
+.special {
+	max-width: 100%;
+	height: auto;
+	margin: 0px 0px 20px 0px;
+	position: relative;
+	z-index:1;
+}
+.special:before, .special:after {
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 13px;
+	left: 10px;
+	width: 50%;
+	top: 80%;
+	max-width:300px;
+	background: rgba(0,0,0,0);
+	-webkit-box-shadow: 0 15px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 15px 10px rgba(0,0,0,.5);
+	box-shadow: 0 15px 10px rgba(0,0,0,.5);
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+.special:after {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+	right: 10px;
+	left: auto;
+}
+/* untere kantenmitte hochgebogen */
+.special2 {
+	max-width: 100%;
+	height: auto;
+	margin: 0px 0px 20px 0px;
+	position: relative;
+	z-index:1;
+}
+.special2:before, .special2:after {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,1);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,1);
+	box-shadow:0 0 20px rgba(0,0,0,1);
+	top:50%;
+	bottom:0px;
+	left:10px;
+	right:10px;
+	-webkit-border-radius: 100px / 10px;
+	-moz-border-radius:100px / 10px;
+	border-radius:100px / 10px;
+}
+.special2:after {
+	right:10px;
+	left:auto;
+	-webkit-transform:skew(8deg) rotate(3deg);
+	-moz-transform:skew(8deg) rotate(3deg);
+	-ms-transform:skew(8deg) rotate(3deg);
+	-o-transform:skew(8deg) rotate(3deg);
+	transform:skew(8deg) rotate(3deg);
+}
+.vintage img, .special img, .special2 img {
+	width: 100%;
+	height: auto;
+}
+/* #Button + modal buttons for joomla! editor + rounded button
+================================================== */
+a.button, button, input[type="submit"], input[type="reset"], input[type="button"], a.modal-button, .button2-left .blank a, .button2-left a, .button2-left div.readmore a, input.button_search[type="image"] {
+	background: rgb(255,255,255); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(255,255,255)), color-stop(100%, rgb(229,229,229))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* IE10+ */
+	background: linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 ); /* IE6-8 */
+	border: 1px solid #aaa;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 0.5em 1em;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #444;
+	display: inline-block;
+	font-family: 'PTSans', Helvetica, Arial, sans-serif;
+	font-size: 87.5%;
+	line-height: 1.4;
+	font-weight: normal;
+	text-decoration: none;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+a.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, a.modal-button a:hover, .button2-left .blank a:hover, .button2-left a:hover, .button2-left div.readmore a:hover, input.button_search[type="image"]:hover {
+	color: #222;
+	background: rgb(255,255,255); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(221,221,221) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(255,255,255)), color-stop(100%, rgb(221,221,221))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgb(255,255,255) 0%, rgb(221,221,221) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgb(255,255,255) 0%, rgb(221,221,221) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgb(255,255,255) 0%, rgb(221,221,221) 100%); /* IE10+ */
+	background: linear-gradient(top, rgb(255,255,255) 0%, rgb(221,221,221) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd', GradientType=0 ); /* IE6-8 */
+	border: 1px solid #888;
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+}
+a.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active, a.modal-button a:active, .button2-left .blank a:active, .button2-left a:active, .button2-left div.readmore a:active, input.button_search[type="image"]:active {
+	border: 1px solid #666;
+	background: rgb(221,221,221); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNGY0ZjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgb(221,221,221) 0%, rgb(244,244,244) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(221,221,221)), color-stop(100%, rgb(244,244,244))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgb(221,221,221) 0%, rgb(244,244,244) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgb(221,221,221) 0%, rgb(244,244,244) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgb(221,221,221) 0%, rgb(244,244,244) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgb(221,221,221) 0%, rgb(244,244,244) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#f4f4f4', GradientType=0 ); /* IE6-8 */
+}
+.button.full-width, button.full-width, input[type="submit"].full-width, input[type="reset"].full-width, input[type="button"].full-width {
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center;
+}
+/* #Button class rounded */
+a.button.rounded, button.rounded, input[type="submit"].rounded, input[type="reset"].rounded, input[type="button"].rounded {
+	padding: 0.5em 1em;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+a.button.surrounded, button.surrounded, input[type="submit"].surrounded, input[type="reset"].surrounded, input[type="button"].surrounded {
+	padding: 0.5em 1em;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.add:before, .delete:before, .edit:before, .email:before, .like:before, .next:before, .play:before, .save:before, .spark:before, .star2:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	color: #3c5a82;
+	text-indent: -2em;
+	text-align: center;
+	padding-left: 1.5em;
+}
+.add:before {
+	content: "\f055";
+}
+.delete:before {
+	content: "\f057";
+}
+.edit:before {
+	content: "\f044";
+}
+.email:before {
+	content: "\f003";
+}
+.like:before {
+	content: "\f08a";
+}
+.next:before {
+	content: "\f054";
+}
+.play:before {
+	content: "\f04b";
+}
+.save:before {
+	content: "\f0c7";
+	padding: 0 1em 0 0;
+}
+.spark:before {
+	content: "\f069";
+}
+.star2:before {
+	content: "\f006";
+}
+/* #Forms
+================================================== */
+form {
+	margin-bottom: 10px;
+}
+fieldset {
+	margin-bottom: 10px;
+}
+input[type="text"], input[type="password"], input[type="email"], textarea, select {
+	border: 1px solid #ccc;
+	padding: 6px 4px;
+	outline: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 87.5%;
+	font-family: 'PTSans', Helvetica, Arial, sans-serif;
+	color: #777;
+	margin: 0;
+	width: 100%;
+	max-width: 210px;
+	display: block;
+	margin-bottom: 10px;
+	background: #fff;
+}
+select {
+	padding: 0;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+	border: 1px solid #aaa;
+	color: #444;
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	box-shadow:  0 0 3px rgba(0,0,0,.2);
+}
+textarea {
+	min-height: 60px;
+}
+label, legend {
+	display: inline-block;
+	font-weight: normal;
+	font-size: 87.5%;
+}
+select {
+	width: 100%;
+	max-width: 210px;
+}
+input[type="checkbox"] {
+	display: inline;
+	width: 1em !important;
+}
+label span, legend span {
+	font-weight: normal;
+	font-size: 1em;
+	color: #444;
+}
+/* #Table inspired by Dirk Jesse
+================================================== */
+table {
+	width:100%;
+	border-collapse:collapse;
+	margin: 1em 0;
+	color:#333;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+}
+table.bordertable {
+	border:1px #ccc solid;
+}
+table caption {
+	font-size: 87.5%;
+	color: #3c5a82;
+	margin-left: .5em;
+}
+th, td {
+	line-height: 1.4em;
+	vertical-align: top;
+	padding: 0.6em 0.5em;
+}
+th *:first-child, td *:first-child {
+	margin-top: 0;
+}
+th.nowrap, td.nowrap {
+	white-space: nowrap;
+}
+thead th {
+	text-align: left;
+	color:#3c5a82;
+	border-bottom: 2px solid #ccc;
+}
+.bordertable thead th {
+	background: rgb(255,255,255); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(255,255,255)), color-stop(100%, rgb(229,229,229))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* IE10+ */
+	background: linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 ); /* IE6-8 */
+	border-right:1px #ccc solid;
+}
+.bordertable tbody th[scope="row"] {
+	background:#f0f0f0;
+}
+.bordertable tbody tr:nth-child(2n+2) {
+	background:#f0f0f0;
+}
+tbody th {
+	text-align: left;
+	border-top:1px solid #ccc;
+	text-align:left;
+}
+.bordertable tbody th {
+	border-right:1px solid #ccc;
+}
+tbody td {
+	text-align: left;
+	border-top:1px solid #ccc;
+}
+.bordertable tbody td {
+	border-right:1px solid #ccc;
+}
+/* highlight row on mouse over */
+.bordertable tbody tr:hover th, .bordertable tbody tr:hover td {
+	background: #fbf8e9;
+	background: rgba(0,0,0,.025);
+}
+/* #Font-Face
+================================================== */
+/*       PTSans    */
+/* Wichtig: Reihenfolge beachten - ie 7-8 - normal normal zuerst!*/
+@font-face {
+	font-family: 'PTSans';
+	src: url('../fonts/PTS55F-webfont.eot');
+	src: url('../fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/PTS55F-webfont.woff') format('woff'), url('../fonts/PTS55F-webfont.ttf') format('truetype'), url('../fonts/PTS55F-webfont.svg#PTSans') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PTSans';
+	src: url('../fonts/PTS75F-webfont.eot');
+	src: url('../fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/PTS75F-webfont.woff') format('woff'), url('../fonts/PTS75F-webfont.ttf') format('truetype'), url('../fonts/PTS75F-webfont.svg#PTSans') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PTSans';
+	src: url('../fonts/PTS56F-webfont.eot');
+	src: url('../fonts/PTS56F-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/PTS56F-webfont.woff') format('woff'), url('../fonts/PTS56F-webfont.ttf') format('truetype'), url('../fonts/PTS56F-webfont.svg#PTSans') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'PTSans';
+	src: url('../fonts/PTS76F-webfont.eot');
+	src: url('../fonts/PTS76F-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/PTS76F-webfont.woff') format('woff'), url('../fonts/PTS76F-webfont.ttf') format('truetype'), url('../fonts/PTS76F-webfont.svg#PTSans') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+/*	Open Sans Condensed	*/
+@font-face {
+	font-family: 'OpenSansCond';
+	src: url('../fonts/OpenSans-CondLight-webfont.eot');
+	src: url('../fonts/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-CondLight-webfont.woff') format('woff'), url('../fonts/OpenSans-CondLight-webfont.ttf') format('truetype'), url('../fonts/OpenSans-CondLight-webfont.svg#OpenSansCond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSansCond';
+	src: url('../fonts/OpenSans-CondLightItalic-webfont.eot');
+	src: url('../fonts/OpenSans-CondLightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-CondLightItalic-webfont.woff') format('woff'), url('../fonts/OpenSans-CondLightItalic-webfont.ttf') format('truetype'), url('../fonts/OpenSans-CondLightItalic-webfont.svg#OpenSansCond') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'OpenSansCond';
+	src: url('../fonts/OpenSans-CondBold-webfont.eot');
+	src: url('../fonts/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-CondBold-webfont.woff') format('woff'), url('../fonts/OpenSans-CondBold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-CondBold-webfont.svg#OpenSansCond') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

@@ -1,0 +1,114 @@
+#wrapper {
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+/**   body **/
+#wrapper #main-pad {
+	position: relative;
+	left: 0;
+	z-index: 9998;
+}
+/**  header **/
+#wrapper #main-pad #toolbarnav {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 9999;
+	height: 2.5em;
+	width: 100%;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	-webkit-box-shadow: rgba(0,0,0,.3) 1px 2px 4px;
+	-moz-box-shadow: rgba(0,0,0,.3) 1px 2px 4px;
+	box-shadow: rgba(0,0,0,.3) 1px 2px 4px;
+}
+#wrapper #main-pad #menu-btn {
+	float: left;
+}
+#toolbarnav .container {
+	padding: 0px !important;
+}
+/**  nav menu **/
+#wrapper #navmenu {
+	background: #475566;
+	height: 100%;
+	display: block;
+	position: absolute;
+	width: 260px;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+}
+#wrapper #navmenu header {
+	display: block;
+	height: 2.5em;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+}
+#wrapper #navmenu header p {
+	padding: .4em;
+	color: #3c5a82;
+	font-size: 1em;
+}
+#wrapper #navmenu ul {
+	list-style: none;
+	background: #475566;
+	height: 100%;
+}
+#wrapper #navmenu ul ul, #wrapper #navmenu ul li {
+	margin: 0 !important;
+}
+#wrapper #navmenu ul li ul li {
+	margin: 0 0 0 1em !important;
+}
+#wrapper #navmenu ul li {
+	display: block;
+}
+#wrapper #navmenu ul li a {
+	position: relative;
+	display: block;
+	padding: .4em .4em .6em .4em !important;
+	color: #f0f0f0;
+	border-bottom: 1px solid #303c4a;
+	text-shadow: -1px -1px 1px #222;
+	text-decoration: none;
+}
+#wrapper #navmenu ul li a:hover {
+	color: #cad0e6;
+	background: #303c4a;
+	border-bottom: 1px solid #333;
+	text-decoration: none;
+}
+#wrapper #navmenu ul li a::after {
+	font-family: FontAwesome;
+  	font-weight: normal;
+  	font-style: normal;
+	line-height: 1;
+  	display: inline-block;
+  	text-decoration: inherit;
+  	padding: 0;
+	content: "\f054";
+	position: absolute;
+	right: 30px;
+	top: .75em;
+}
+/*	button style	*/
+.reorder:after {
+	font-family: FontAwesome;
+  	font-weight: normal;
+  	font-style: normal;
+	font-size: 1.4em;
+	line-height: 1;
+  	display: inline-block;
+  	text-decoration: inherit;
+  	padding: 0;
+	color: #3c5a82;
+	content: "\f0c9";
+}
+a.button.reorder, button.reorder, input[type="submit"].reorder, input[type="reset"].reorder, input[type="button"].reorder {
+	padding: .6em 1em !important;
+	margin: 2px 0 0 0 !important;
+	text-align: center;
+	max-height: 2.5em !important;
+}

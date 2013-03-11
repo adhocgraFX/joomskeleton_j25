@@ -1,0 +1,17 @@
+.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12{margin-left:10px;margin-right:10px}
+.alpha,.omega{margin-left:10px;margin-right:10px}
+.align_center,.align_right{text-align:left}
+.hide-on-mobile{display:none}
+.grid_1_mobile,.grid_2_mobile,.grid_3_mobile,.grid_4_mobile,.grid_5_mobile,.grid_6_mobile,.grid_7_mobile,.grid_8_mobile,.grid_9_mobile,.grid_10_mobile,.grid_11_mobile,.grid_12_mobile{float:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0 10px}
+.grid_1_mobile{width:8.33%}
+.grid_2_mobile{width:16.66%}
+.grid_3_mobile{width:25%}
+.grid_4_mobile{width:33.33%}
+.grid_5_mobile{width:41.66%}
+.grid_6_mobile{width:50%}
+.grid_7_mobile{width:58.33%}
+.grid_8_mobile{width:66.66%}
+.grid_9_mobile{width:75%}
+.grid_10_mobile{width:83.33%}
+.grid_11_mobile{width:91.66%}
+.grid_12_mobile{width:100%}
