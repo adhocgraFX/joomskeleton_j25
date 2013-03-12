@@ -15,7 +15,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load this script
-$doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- Modernisierungen - this script must be in the head
+$doc->addScript($tpath.'/js/modernizr-2.6.2.min.js'); // <- Modernisierungen - this script must be in the head
 
 // get my params
 $logo = $this->params->get('logo');

@@ -5,91 +5,52 @@
  *
  * http://blog.ginader.de/dev/syncheight/
  *
- * Copyright (c) 2007-2013
+ * Copyright (c) 2007 
  * Dirk Ginader (ginader.de)
  * Dirk Jesse (yaml.de)
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  *
- * Version: 1.3
- *
- * Changelog
- * * v1.3: compatibility fix for jQuery 1.9.x (removed $.browser)
+ * Version: 1.0
  *
  * Usage:
-	$(window).load(function(){
+ 	$(document).ready(function(){
 		$('p').syncHeight();
+		$(window).resize(function(){ //if you want to update the columns after a Browser resize (optional)
+			$('p').syncHeight();
+		});
 	});
  */
 
 (function($) {
-    var getHeightProperty = function() {
+	$.fn.syncHeight = function(settings) {
+		var max = 0;
 		var browser_id = 0;
 		var property = [
-			// To avoid content overflow in synchronised boxes on font scaling, we
-			// use 'min-height' property for modern browsers ...
-			['min-height','0px'],
-			// and 'height' property for Internet Explorer.
+		   ['min-height','0px'],
 			['height','1%']
 		];
 
-		var bMatch = /(msie) ([\w.]+)/.exec(navigator.userAgent.toLowerCase()) || [],
-			browser = bMatch[1] || "",
-			browserVersion = bMatch[2] || "0";
-
 		// check for IE6 ...
-		if(browser == 'msie' && browserVersion < 7){
+		if($.browser.msie && $.browser.version < 7){
 			browser_id = 1;
 		}
-
-        return { 'name': property[browser_id][0],
-                 'autoheightVal': property[browser_id][1] };
-    };
-
-    $.getSyncedHeight = function(selector) {
-        var max = 0;
-        var heightProperty = getHeightProperty();
+		
 		// get maximum element height ...
-		$(selector).each(function() {
+		$(this).each(function() {
 			// fallback to auto height before height check ...
-			$(this).css(heightProperty.name, heightProperty.autoheightVal);
-			var val = $(this).height();
+			$(this).css(property[browser_id][0],property[browser_id][1]);
+			var val=$(this).height();
 			if(val > max){
-				max = val;
+			   max = val;
 			}
 		});
-        return max;
-    };
-
-	$.fn.syncHeight = function(config) {
-		var defaults = {
-			updateOnResize: false,	// re-sync element heights after a browser resize event (useful in flexible layouts)
-            height: false
-		};
-		var options = $.extend(defaults, config);
-
-		var e = this;
-
-		var max = 0;
-        var heightPropertyName = getHeightProperty().name;
-
-        if(typeof(options.height) === "number") {
-            max = options.height;
-        } else {
-            max = $.getSyncedHeight(this);
-        }
+		
 		// set synchronized element height ...
-		$(this).each(function() {
-			$(this).css(heightPropertyName, max+'px');
+ 		$(this).each(function() {
+  			$(this).css(property[browser_id][0],max+'px');
 		});
-
-		// optional sync refresh on resize event ...
-		if (options.updateOnResize === true) {
-			$(window).resize(function(){
-				$(e).syncHeight();
-			});
-		}
 		return this;
-	};
+	};	
 })(jQuery);

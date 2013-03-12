@@ -22,7 +22,7 @@ $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s",time() + $offset) . " GMT";
 // send cache expiration header to broswer
 header($ExpStr);
 
-require('jquery-1.9.1.min.js');
+require('jquery-1.7.2.min.js');
 require('responsiveslides.min.js');
 require('jquery.syncheight.js');
 require('hide.js');
