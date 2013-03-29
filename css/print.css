@@ -1,0 +1,97 @@
+/*
+* JoomFluid 2.5
+* Copyright 2012, Johannes Hock
+* www.adhocgrafx.de
+
+* print styles */
+
+@page {
+ 	margin: 1.5cm 2cm;
+}
+body, article {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'source-sans-pro', Helvetica, Arial, sans-serif;
+	color: #000;
+	background: #fff;
+	font-size: 11pt;
+	line-height: 1.3;
+}
+header, nav, aside, footer {
+	display: none;
+}
+article {
+	page-break-before: avoid;
+}
+a {
+	color: #666;
+	font-weight: normal;
+	font-style: italic;
+}
+p, ul li, ol li, dl dt, dl dd, img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+/* TYPO */
+p + p {
+	text-indent: 1.6em
+}
+p, ul li {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'bitter', Helvetica, Arial, sans-serif;
+	line-height: 1.3;
+	color: #000;
+	background: none;
+	page-break-after: avoid;
+}
+/* typographic scale for headlines - look at indesign */
+h1 {
+	font-size: 24pt; 
+}
+h2 {
+	font-size: 18pt; 
+}
+h3 {
+	font-size: 14pt; 
+}
+h4 {
+	font-size: 12pt; 
+}
+h5 {
+	font-size: 11pt; 
+}
+h6 {
+	font-size: 10pt;    
+}
+
+/* JOOMLA STUFF*/
+.blog, .item-page {
+	padding: 0;
+	margin-top: .5cm;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: 0;
+}
+ul.actions, dl.article-info, div.content-showtags {
+	display: none;
+}
+ 
+@media print and (color) {
+* {
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+}
+}

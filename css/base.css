@@ -167,6 +167,16 @@ p.bookstyle {
 p.bookstyle > * {
 	text-indent: 0;
 }
+article p, article ul li {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+}
+article p + p {
+	text-indent: 1.6em;
+}
 p img {
 	margin: 0;
 }
@@ -218,7 +228,7 @@ p.drop-cap-3:first-letter {
 	background: transparent;
 	color: #777;
 }
-p.drop-cap-2, p.drop-cap-3 {
+p.drop-cap-2, p.drop-cap-3, p.noindent {
 	text-indent: 0 !important;
 }
 p.highlight {
@@ -228,6 +238,7 @@ p.dimmed {
 	color: #999;
 }
 p.box, .box {
+	text-indent: 0 !important;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
@@ -380,13 +391,13 @@ ul {
 ol {
 	list-style: decimal;
 }
-ol, ul.square, ul.circle, ul.disc {
+ol, article ul, ul.square, ul.circle, ul.disc {
 	margin-left: 2em;
 }
 ul.square {
 	list-style: square outside;
 }
-ul.circle {
+ul.circle, article ul {
 	list-style: circle outside;
 }
 ul.disc {
@@ -423,7 +434,10 @@ article dl dd {
 	margin-left: 2em !important;
 	text-indent: -2em;
 }
-/*	some font-awesome icons	*/
+/*	some font-awesome icons	- ziemlich viel arbeit */
+ul.leaf, ul.heart-empty , ul.star-empty, ul.bookmark-empty {
+	list-style: none outside;
+}
 ul.leaf li:before, ul.heart-empty li:before, ul.star-empty li:before, ul.bookmark-empty li:before, article dl dd:before {
 	font-family: FontAwesome;
 	font-weight: normal;
@@ -505,24 +519,7 @@ img.two-thirds-image {
 	width: 66%;
 	height: auto;
 }
-/*	layout img helpers	
-img.left-image {
-	float: left;
-	display: inline-block;
-	margin-right: 10px;
-	margin-bottom: 10px
-}
-img.right-image {
-	float: right;
-	display: inline-block;
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
-img.center-image {
-	display: block;
-	text-align: center;
-	margin: 10px auto;
-}*/
+
 /* object and video */
 object, embed {
 	max-width: 100%;
