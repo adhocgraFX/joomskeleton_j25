@@ -1,10 +1,9 @@
 /*
-* JoomFluid 2.5
-* Copyright 2012, Johannes Hock
+* JoomSkeleton 2.5
+* Copyright 2013, Johannes Hock
 * www.adhocgrafx.de
 
 * print styles */
-
 @page {
  	margin: 1.5cm 2cm;
 }
@@ -33,6 +32,10 @@ a {
 }
 p, ul li, ol li, dl dt, dl dd, img {
 	page-break-inside: avoid;
+}
+table {
+	page-break-inside: avoid;
+	max-width: 100% !important;
 }
 img {
 	max-width: 100% !important;

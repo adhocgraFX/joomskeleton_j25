@@ -177,6 +177,9 @@ article p, article ul li {
 article p + p {
 	text-indent: 1.6em;
 }
+article p.noindent {
+	text-indent: 0 !important;
+}
 p img {
 	margin: 0;
 }
@@ -228,7 +231,7 @@ p.drop-cap-3:first-letter {
 	background: transparent;
 	color: #777;
 }
-p.drop-cap-2, p.drop-cap-3, p.noindent {
+p.drop-cap-2, p.drop-cap-3 {
 	text-indent: 0 !important;
 }
 p.highlight {
@@ -881,7 +884,7 @@ tbody td {
 	border-right:1px solid #ccc;
 }
 /* highlight row on mouse over */
-.bordertable tbody tr:hover th, .bordertable tbody tr:hover td {
+tbody tr:hover th, tbody tr:hover td, .bordertable tbody tr:hover th, .bordertable tbody tr:hover td {
 	background: #fbf8e9;
 	background: rgba(0,0,0,.025);
 }
