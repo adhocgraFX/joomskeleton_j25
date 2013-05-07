@@ -1570,8 +1570,10 @@ h4.js_heading a {
 }
 /*   Modul-Breiten 75 66 50 33 25 20 in prozent   */
 #medium .module.m_width-75, #medium .module.m_width-66, #medium .module.m_width-50, #medium .module.m_width-33, #medium .module.m_width-25, #medium .module.m_width-20 {
-	margin-right: 10px;
- 	margin-left: 10px;
+	margin-right: 1%;
+	margin-left: 1%;
+	/*margin-right: 10px;
+ 	margin-left: 10px;*/
 	padding-left: 0px;
 	padding-right: 0px;
 	*padding-left: 0px;
@@ -1582,34 +1584,40 @@ h4.js_heading a {
 	margin-bottom: 20px;
 }
 #medium .module.m_width-75 {	/*  Summe + 2% Abstand muss immer 100% ergeben!  */
-	width: -webkit-calc(75% - 10px);
+	width: 74.5%;
+	/*width: -webkit-calc(75% - 10px);
     	width: -moz-calc(75% - 10px);
-    	width: calc(75% - 10px);
+    	width: calc(75% - 10px);*/
 }
 #medium .module.m_width-66 {
-	width: -webkit-calc(66.66% - 10px);
+	width: 66%;
+	/*width: -webkit-calc(66.66% - 10px);
     	width: -moz-calc(66.66% - 10px);
-    	width: calc(66.66% - 10px);
+    	width: calc(66.66% - 10px);*/
 }
 #medium .module.m_width-50 {
-	width: -webkit-calc(50% - 10px);
+	width: 49%;
+	/*width: -webkit-calc(50% - 10px);
     	width: -moz-calc(50% - 10px);
-    	width: calc(50% - 10px);;
+    	width: calc(50% - 10px);*/
 }
 #medium .module.m_width-33 {
-	width: -webkit-calc(33.33% - 20px*2/3);
+	width: 32%;
+	/*width: -webkit-calc(33.33% - 20px*2/3);
     	width: -moz-calc(33.33% - 20px*2/3);
-    	width: calc(33.33% - 20px*2/3);
+    	width: calc(33.33% - 20px*2/3);*/
 }
 #medium .module.m_width-25 {
-	width: -webkit-calc(25% - 20px*3/4);
+	width: 23.5%;
+	/*width: -webkit-calc(25% - 20px*3/4);
     	width: -moz-calc(25% - 20px*3/4);
-    	width: calc(25% - 20px*3/4);
+    	width: calc(25% - 20px*3/4);*/
 }
 #medium .module.m_width-20 {
-	width: -webkit-calc(20% - 20px*4/5);
+	width: 18.4%;
+	/*width: -webkit-calc(20% - 20px*4/5);
     	width: -moz-calc(20% - 20px*4/5);
-    	width: calc(20% - 20px*4/5);
+    	width: calc(20% - 20px*4/5);*/
 }
 #medium .module.m_width-75:first-child, #medium .module.m_width-66:first-child, #medium .module.m_width-50:first-child, #medium .module.m_width-33:first-child, #medium .module.m_width-25:first-child, #medium .module.m_width-20:first-child {
 	margin-left: 0 !important;

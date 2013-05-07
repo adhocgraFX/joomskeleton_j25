@@ -162,7 +162,7 @@ p {
 }
 /* special paragraphs */
 p.bookstyle {
-	text-indent: 3em !important;
+	text-indent: 1.6em;
 }
 p.bookstyle > * {
 	text-indent: 0;
@@ -174,9 +174,10 @@ article p, article ul li {
 	hyphens: auto;
 	word-wrap: break-word;
 }
-article p + p {
+
+/*article p + p {
 	text-indent: 1.6em;
-}
+}*/
 article p.noindent {
 	text-indent: 0 !important;
 }
