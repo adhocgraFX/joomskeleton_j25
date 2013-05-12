@@ -12,10 +12,20 @@ $doc = JFactory::getDocument();
 $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx'); // parameter (menu entry)
 $tpath = $this->baseurl.'/templates/'.$this->template;
+
 $this->setGenerator(null);
+
+// mein css 
+$doc->addStyleSheet($tpath.'/css/template.css.php'); 
 
 // load this script
 $doc->addScript($tpath.'/js/modernizr-2.6.2.min.js'); // <- Modernisierungen - this script must be in the head
+
+// unset scripts, put them into /js/template.js.php to minify http requests
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
 
 // get my params
 $logo = $this->params->get('logo');
@@ -42,6 +52,9 @@ $anonym = $this->params->get('anonym');
 <!--<![endif]-->
 
 <head>
+<!-- my scripts -->
+<script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php'; ?>"></script>
+
 <jdoc:include type="head" />
 
 <!-- Mobile Specific Metas -->
@@ -50,8 +63,7 @@ $anonym = $this->params->get('anonym');
 <meta name="apple-touch-fullscreen" content="YES" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<?php // mein css 
-$doc->addStyleSheet($tpath.'/css/template.css.php'); 
+<?php // meine css optionen
 include_once ('css/styles_css.php'); ?>
 
 <!--[if lt IE 9]>
@@ -145,9 +157,6 @@ function myCallback(i) {
 </script>
 <![endif]-->
 <script src="<?php echo $tpath; ?>/js/adapt.min.js"></script>
-
-<!-- my scripts -->
-<script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php'; ?>"></script>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="<?php echo $tpath; ?>/favicon.ico">
@@ -443,25 +452,21 @@ function myCallback(i) {
 <!-- debug -->
 <jdoc:include type="modules" name="debug" />
 
-<!-- smooth scroll -->
-<script>
+<script type="text/javascript">
+<!-- smooth scroll -->	
 	$(document).ready(function() {
 		$('ul.mynav a').smoothScroll({
 			speed: 600
 		});
 	});
-</script>
-  
+
 <!-- BEEZ Tabs - Ideen und WAI ARIA von Angie Radtke --> 
-<script type="text/javascript">
 	var altopen='<?php echo JText::_('TPL_BEEZ5_ALTOPEN', true); ?>';
       var altclose='<?php echo JText::_('TPL_BEEZ5_ALTCLOSE', true); ?>';
 	var bildauf='<?php echo $tpath; ?>/images/plus.png';
 	var bildzu='<?php echo $tpath; ?>/images/minus.png';
-</script> 
 
 <!-- menü in select klonen --> 
-<script type="text/javascript">
 	// DOM ready
 	 $(function() {
 	// Create the dropdown base
@@ -486,10 +491,8 @@ function myCallback(i) {
         window.location = $(this).find("option:selected").val();
       });
 	 });
-</script> 
 
 <!-- für gleiche modulhöhen	--> 
-<script type="text/javascript">
 $(window).load(function(){
   $('#equal1 > div').syncHeight();
   $(window).resize(function(){ 
@@ -516,31 +519,27 @@ $(window).load(function(){
     $('#equal6 > div').syncHeight();
   });
 });
-</script> 
 
 <!-- google analytics id -->
 <?php if ($analytics != "UA-XXXXX-X"): ?>
-<script>
 	var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],['_trackPageview']]; 
 	<?php if ($anonym == 1):?>
 		_gaq.push (['_gat._anonymizeIp']);
 	<?php endif; ?>
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
 <?php endif; ?>
 
 <!-- google Render-Anweisung --> 
-<script type="text/javascript">
+<?php if ($googleplus == 1): ?>
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
-</script> 
+<?php endif; ?>
 
 <!-- neu eingebaut: responsive slideshow von viljamis -->
 <?php if ($this->countModules('slideshow')): ?>
-<script type="text/javascript">
     $(window).load(function() {
 	$("#slider").responsiveSlides({
         <?php if ($slidethumb == 1):?>
@@ -560,12 +559,10 @@ $(window).load(function(){
 	  <?php endif; ?>
 	  });
    });
-</script>
 <?php endif; ?>
 
 <!-- text resizer --> 
 <?php if ($typesize == 1):?>
-<script type="text/javascript">
 	jQuery(document).ready( function() {
 		jQuery( "#textsizer-embed a" ).textresizer({
 		target: "#main",
@@ -587,11 +584,9 @@ $(window).load(function(){
 		selectedIndex: 1
 		});
 	});
-</script>
 <?php endif; ?>
 
 <!-- footable responsive tables --> 
-<script type="text/javascript">
   $(window).load(function() {
     $('.footable').footable();  	
   });
