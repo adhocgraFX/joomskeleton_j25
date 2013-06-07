@@ -15,11 +15,16 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 
 $this->setGenerator(null);
 
+// mobile detect usage von Rene Kreijveld
+include_once ('js/Mobile_Detect.php');
+$detect = new Mobile_Detect();
+$layout = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'mobile') : 'desktop');
+
 // mein css 
 $doc->addStyleSheet($tpath.'/css/template.css.php'); 
 
 // load this script
-$doc->addScript($tpath.'/js/modernizr-2.6.2.min.js'); // <- Modernisierungen - this script must be in the head
+$doc->addScript($tpath.'/js/modernizr-2.6.2.custom.min.js'); // <- Modernisierungen - this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests
 unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
@@ -41,8 +46,8 @@ $anonym = $this->params->get('anonym');
 ?>
 
 <!DOCTYPE html>
-
-<!-- Modernisierungen -->
+<!-- ...Modernisierungen... -->
+<!--[if IEMobile]><html lang="<?php echo $this->language; ?>" class="iemobile"> <![endif]-->
 <!--[if lt IE 7 ]> <html lang="<?php echo $this->language; ?>" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="<?php echo $this->language; ?>" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="<?php echo $this->language; ?>" class="no-js ie8"> <![endif]-->
@@ -54,7 +59,6 @@ $anonym = $this->params->get('anonym');
 <head>
 <!-- my scripts -->
 <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php'; ?>"></script>
-
 <jdoc:include type="head" />
 
 <!-- Mobile Specific Metas -->
@@ -62,13 +66,9 @@ $anonym = $this->params->get('anonym');
 <meta name="HandheldFriendly" content="true" />
 <meta name="apple-touch-fullscreen" content="YES" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 <?php // meine css optionen
 include_once ('css/styles_css.php'); ?>
 
-<!--[if lt IE 9]>
-	<script type="text/javascript" src="<?php echo $tpath; ?>/js/html5.js"></script>
-<![endif]-->
 <!--[if lte IE 7]>
 	<link rel="stylesheet" href="<?php echo $tpath; ?>/css/font-awesome-ie7.min.css" />
 <![endif]-->
@@ -76,7 +76,7 @@ include_once ('css/styles_css.php'); ?>
 <!-- adaptive 960 CSS grid system von Nathan Smith -->
 <!-- hier: Geschmackssache, entweder desktop oder mobile first -->
 <noscript>
-	<link rel="stylesheet" href="<?php echo $tpath; ?>/css/960.min.css" />
+<link rel="stylesheet" href="<?php echo $tpath; ?>/css/960.min.css" />
 </noscript>
 <script>
 var ADAPT_CONFIG = {
@@ -163,8 +163,10 @@ function myCallback(i) {
 <link rel="apple-touch-icon" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114.png">
-</head><body class="<?php echo $pageclass; ?>">
+</head>
+<body class="<?php echo $pageclass; ?>">
 <a id="top-of-page"></a> 
+
 <!--	 äußerer Hauptrahmen	-->
 <div id="wrapper"> 
 	<!--	 off canvas navi	-->
@@ -179,9 +181,12 @@ function myCallback(i) {
 		<!-- navi + suche  -->
 		<div id="toolbarnav">
 			<div class="container_12">
+				<?php if ($layout != 'mobile'):?>
 				<nav class="grid_12 hide-on-mobile" id="nav">
 					<jdoc:include type="modules" name="nav" />
 				</nav>
+				<?php endif; ?>
+				<?php if ($layout == 'mobile'):?>
 				<div class="grid_2_mobile alpha hide-on-desktop">
 					<button class="reorder" id="menu-btn">
 					<a href="#navmenu"></a>
@@ -191,6 +196,7 @@ function myCallback(i) {
 				<div class="grid_10_mobile omega hide-on-desktop clearfix" id="search-pad">
 					<jdoc:include type="modules" name="search" style="joomskeleton"/>
 				</div>
+				<?php endif; ?>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -203,25 +209,28 @@ function myCallback(i) {
 				<div class="headerlogo"> <a href="<?php echo $this->baseurl ?>" id="logo" > <IMG src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/logo.png" alt="joomskeleton" /> </a> </div>
 				<?php endif;?>
 			</div>
+			<?php if ($layout != 'mobile'):?>
 			<div class="grid_5 omega hide-on-mobile clearfix" id="search-pad2">
 				<?php if ($this->countModules('search')): ?>
-					<jdoc:include type="modules" name="search" style="joomskeleton"/>
+				<jdoc:include type="modules" name="search" style="joomskeleton"/>
 				<?php endif; ?>
 				<?php if ($typesize == 1):?>
-					<div class="hide-on-mobile clearfix" id="textsizer-embed">
-   						<ul class="textresizer">
-      						<li><a href="#nogo" class="small-text" title="Small">Small</a></li>
-      						<li><a href="#nogo" class="medium-text" title="Default">Default</a></li>
-      						<li><a href="#nogo" class="large-text" title="Large">Large</a></li>
-      						<li><a href="#nogo" class="larger-text" title="Larger">Larger</a></li>
-   						</ul>
-					</div>
+				<div class="hide-on-mobile clearfix" id="textsizer-embed">
+					<ul class="textresizer">
+						<li><a href="#nogo" class="small-text" title="Small">Small</a></li>
+						<li><a href="#nogo" class="default-text" title="Default">Default</a></li>
+						<li><a href="#nogo" class="large-text" title="Large">Large</a></li>
+						<li><a href="#nogo" class="larger-text" title="Larger">Larger</a></li>
+					</ul>
+				</div>
 				<?php endif;?>
 			</div>
+			<?php endif;?>
 		</div>
 		<!--[if lte IE 7]>
             <p class="box red2">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]--> 
+        <![endif]-->
+		<?php if ($layout != 'mobile'):?>
 		<!-- breadcrumbs -->
 		<?php if ($this->countModules('breadcrumbs')): ?>
 		<div class="grid_12 hide-on-mobile" id="breadcrumbs-pad">
@@ -238,7 +247,7 @@ function myCallback(i) {
 		<?php endif; ?>
 		<!-- head1 + head2 + head3 -->
 		<?php if ($this->countModules('head1') or $this->countModules('head2') or $this->countModules('head3')): ?>
-		<div class="container_12" id="medium">
+		<section class="container_12 medium">
 			<?php if ($this->countModules('head1')): ?>
 			<div class="grid_12" id="equal1" >
 				<jdoc:include type="modules" name="head1" style="joomskeleton" />
@@ -254,12 +263,13 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="head3" style="joomskeleton" />
 			</div>
 			<?php endif; ?>
-		</div>
+		</section>
+		<?php endif; ?>
 		<?php endif; ?>
 		<!-- 3 bzw 2 columns with left + content + right / + message above content -->
 		<?php if ($this->countModules('left or left_hide or left_tabs or left_slider') and $this->countModules('right or right_hide or right_tabs or right_slider')): ?>
 		<?php if ($gridsort == 'lmr'):?>
-		<div class="grid_12">
+		<section class="grid_12">
 			<section class="grid_6 push_3 alpha" id="main" >
 				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
 				<jdoc:include type="message" />
@@ -278,9 +288,9 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
 				<jdoc:include type="modules" name="right_slider" style="slider" />
 			</aside>
-		</div>
+		</section>
 		<?php elseif ($gridsort == 'mlr'):?>
-		<div class="grid_12">
+		<section class="grid_12">
 			<section class="grid_6 alpha" id="main" >
 				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
 				<jdoc:include type="message" />
@@ -299,9 +309,9 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
 				<jdoc:include type="modules" name="right_slider" style="slider" />
 			</aside>
-		</div>
+		</section>
 		<?php elseif ($gridsort == 'lrm'):?>
-		<div class="grid_12">
+		<section class="grid_12">
 			<section class="grid_6 push_6 alpha" id="main" >
 				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
 				<jdoc:include type="message" />
@@ -320,10 +330,10 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
 				<jdoc:include type="modules" name="right_slider" style="slider" />
 			</aside>
-		</div>
+		</section>
 		<?php endif; ?>
 		<?php elseif ($this->countModules('right or right_hide or right_tabs or right_slider')): ?>
-		<div class="grid_12" >
+		<section class="grid_12" >
 			<section class="grid_8 alpha" id="main" >
 				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
 				<jdoc:include type="message" />
@@ -336,9 +346,9 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
 				<jdoc:include type="modules" name="right_slider" style="slider" />
 			</aside>
-		</div>
+		</section>
 		<?php elseif ($this->countModules('left or left_hide or left_tabs or left_slider')): ?>
-		<div class="grid_12">
+		<section class="grid_12">
 			<section class="grid_8 push_4 alpha" id="main" >
 				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
 				<jdoc:include type="message" />
@@ -351,7 +361,7 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="left_tabs" style="beezTabs" headerLevel="2"  id="3" />
 				<jdoc:include type="modules" name="left_slider" style="slider" />
 			</aside>
-		</div>
+		</section>
 		<?php else : ?>
 		<section class="grid_12" id="main" >
 			<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
@@ -361,8 +371,9 @@ function myCallback(i) {
 		</section>
 		<?php endif; ?>
 		<!-- head1 + head2 + head3  content first in mobile mode -->
+		<?php if ($layout == 'mobile'):?>
 		<?php if ($this->countModules('head1') or $this->countModules('head2') or $this->countModules('head3')): ?>
-		<div class="container_12" id="small">
+		<section class="container_12 small">
 			<?php if ($this->countModules('head1')): ?>
 			<div class="grid_12" >
 				<jdoc:include type="modules" name="head1" style="joomskeleton" />
@@ -378,11 +389,33 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="head3" style="joomskeleton" />
 			</div>
 			<?php endif; ?>
-		</div>
+		</section>
+		<?php endif; ?>
+		<!-- bottom1 + bottom2 + bottom3 in mobile mode -->
+		<?php if ($this->countModules('bottom1') or $this->countModules('bottom2') or $this->countModules('bottom3')): ?>
+		<section class="container_12 small">
+			<?php if ($this->countModules('bottom1')): ?>
+			<div class="grid_12" >
+				<jdoc:include type="modules" name="bottom1" style="joomskeleton" />
+			</div>
+			<?php endif; ?>
+			<?php if ($this->countModules('bottom2')): ?>
+			<div class="grid_12" >
+				<jdoc:include type="modules" name="bottom2" style="joomskeleton" />
+			</div>
+			<?php endif; ?>
+			<?php if ($this->countModules('bottom3')): ?>
+			<div class="grid_12" >
+				<jdoc:include type="modules" name="bottom3" style="joomskeleton" />
+			</div>
+			<?php endif; ?>
+		</section>
+		<?php endif; ?>
 		<?php endif; ?>
 		<!-- bottom1 + bottom2 + bottom3 -->
+		<?php if ($layout != 'mobile'):?>
 		<?php if ($this->countModules('bottom1') or $this->countModules('bottom2') or $this->countModules('bottom3')): ?>
-		<div class="container_12" id="medium">
+		<section class="container_12 medium">
 			<?php if ($this->countModules('bottom1')): ?>
 			<div class="grid_12" id="equal4" >
 				<jdoc:include type="modules" name="bottom1" style="joomskeleton" />
@@ -398,27 +431,8 @@ function myCallback(i) {
 				<jdoc:include type="modules" name="bottom3" style="joomskeleton" />
 			</div>
 			<?php endif; ?>
-		</div>
+		</section>
 		<?php endif; ?>
-		<!-- bottom1 + bottom2 + bottom3 in mobile mode -->
-		<?php if ($this->countModules('bottom1') or $this->countModules('bottom2') or $this->countModules('bottom3')): ?>
-		<div class="container_12" id="small">
-			<?php if ($this->countModules('bottom1')): ?>
-			<div class="grid_12" >
-				<jdoc:include type="modules" name="bottom1" style="joomskeleton" />
-			</div>
-			<?php endif; ?>
-			<?php if ($this->countModules('bottom2')): ?>
-			<div class="grid_12" >
-				<jdoc:include type="modules" name="bottom2" style="joomskeleton" />
-			</div>
-			<?php endif; ?>
-			<?php if ($this->countModules('bottom3')): ?>
-			<div class="grid_12" >
-				<jdoc:include type="modules" name="bottom3" style="joomskeleton" />
-			</div>
-			<?php endif; ?>
-		</div>
 		<?php endif; ?>
 		<!-- footer + copy + twitter button -->
 		<?php if ($this->countModules('nav_bottom')): ?>
@@ -427,9 +441,9 @@ function myCallback(i) {
 		</menu>
 		<?php endif; ?>
 		<?php if ($this->countModules('footer')): ?>
-		<div class="grid_6 alpha" id="footer-pad">
+		<footer class="grid_6 alpha" id="footer-pad">
 			<jdoc:include type="modules" name="footer" style="joomskeleton" />
-		</div>
+		</footer>
 		<?php endif; ?>
 		<?php if ($twitterid or $googleplus == 1): ?>
 		<div class="grid_6 omega" id="buttons-pad">
@@ -444,14 +458,17 @@ function myCallback(i) {
 		</div>
 		<?php endif; ?>
 		<div class="grid_12" id="copy-pad"> <a href="http://www.adhocgrafx.de" target="_blank">adhocgraFX &copy; Johannes Hock 2011 all rights reserved</a> </div>
-		<div class="grid_12" id="gototop-pad"><ul class="mynav"><li><a href="#top-of-page">Top</a></li></ul></div>
+		<div class="grid_12" id="gototop-pad">
+			<ul class="mynav">
+				<li><a href="#top-of-page">Top</a></li>
+			</ul>
+		</div>
 	</div>
 	<!--	 main pad	--> 
 </div>
 <!--	 wrapper	--> 
 <!-- debug -->
 <jdoc:include type="modules" name="debug" />
-
 <script type="text/javascript">
 <!-- smooth scroll -->	
 	$(document).ready(function() {
@@ -466,6 +483,25 @@ function myCallback(i) {
 	var bildauf='<?php echo $tpath; ?>/images/plus.png';
 	var bildzu='<?php echo $tpath; ?>/images/minus.png';
 
+<!-- google analytics id -->
+<?php if ($analytics != "UA-XXXXX-X"): ?>
+	var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],['_trackPageview']]; 
+	<?php if ($anonym == 1):?>
+		_gaq.push (['_gat._anonymizeIp']);
+	<?php endif; ?>
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+<?php endif; ?>
+
+<!-- google Render-Anweisung --> 
+<?php if ($googleplus == 1): ?>
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+<?php endif; ?>
+
+<?php if ($layout == 'mobile'):?>
 <!-- menü in select klonen --> 
 	// DOM ready
 	 $(function() {
@@ -491,7 +527,8 @@ function myCallback(i) {
         window.location = $(this).find("option:selected").val();
       });
 	 });
-
+<?php endif; ?>
+<?php if ($layout != 'mobile'):?>
 <!-- für gleiche modulhöhen	--> 
 $(window).load(function(){
   $('#equal1 > div').syncHeight();
@@ -520,27 +557,9 @@ $(window).load(function(){
   });
 });
 
-<!-- google analytics id -->
-<?php if ($analytics != "UA-XXXXX-X"): ?>
-	var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],['_trackPageview']]; 
-	<?php if ($anonym == 1):?>
-		_gaq.push (['_gat._anonymizeIp']);
-	<?php endif; ?>
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-<?php endif; ?>
-
-<!-- google Render-Anweisung --> 
-<?php if ($googleplus == 1): ?>
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-<?php endif; ?>
-
 <!-- neu eingebaut: responsive slideshow von viljamis -->
 <?php if ($this->countModules('slideshow')): ?>
-    $(window).load(function() {
+    	$(window).load(function() {
 	$("#slider").responsiveSlides({
         <?php if ($slidethumb == 1):?>
 	  	auto: true,
@@ -558,11 +577,11 @@ $(window).load(function(){
 	  	namespace: "centered-btns"
 	  <?php endif; ?>
 	  });
-   });
+   	});
 <?php endif; ?>
 
 <!-- text resizer --> 
-<?php if ($typesize == 1):?>
+	<?php if ($typesize == 1):?>
 	jQuery(document).ready( function() {
 		jQuery( "#textsizer-embed a" ).textresizer({
 		target: "#main",
@@ -571,7 +590,7 @@ $(window).load(function(){
 			// Small. Index 0
 			{ "font-size" : "87.5%",			  
 			},
- 			// Medium. Index 1
+ 			// Default. Index 1
 			{ "font-size" : "100%",			  
 			},
  			// Large. Index 2
@@ -584,6 +603,7 @@ $(window).load(function(){
 		selectedIndex: 1
 		});
 	});
+	<?php endif; ?>
 <?php endif; ?>
 
 <!-- footable responsive tables --> 
@@ -591,6 +611,5 @@ $(window).load(function(){
     $('.footable').footable();  	
   });
 </script>
-
 </body>
 </html>

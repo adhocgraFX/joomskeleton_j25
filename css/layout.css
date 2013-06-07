@@ -22,13 +22,13 @@
 /* html #range_ids via callback adapt js = media queries
 ======================================================== */
 /* callback module shuffling */
-html#range_0 #medium, html#range_1 #small, html#range_2 #small, html#range_3 #small, html#range_4 #small, html#range_5 #small, html#range_6 #small {
+html#range_0 .medium, html#range_1 .small, html#range_2 .small, html#range_3 .small, html#range_4 .small, html#range_5 .small, html#range_6 .small {
 	display: none !important;
 }
-html#range_0 #small, html#range_1 #medium, html#range_2 #medium, html#range_3 #medium, html#range_4 #medium, html#range_5 #medium, html#range_6 #medium {
+html#range_0 .small, html#range_1 .medium, html#range_2 .medium, html#range_3 .medium, html#range_4 .medium, html#range_5 .medium, html#range_6 .medium {
 	display: inline !important;
 }
-#small .grid_12 {
+.small .grid_12 {
 	margin: 0px 20px !important;
 }
 /* range_0 = - 760px */
@@ -1569,7 +1569,7 @@ h4.js_heading a {
 	background: transparent;
 }
 /*   Modul-Breiten 75 66 50 33 25 20 in prozent   */
-#medium .module.m_width-75, #medium .module.m_width-66, #medium .module.m_width-50, #medium .module.m_width-33, #medium .module.m_width-25, #medium .module.m_width-20 {
+.medium .module.m_width-75, .medium .module.m_width-66, .medium .module.m_width-50, .medium .module.m_width-33, .medium .module.m_width-25, .medium .module.m_width-20 {
 	margin-right: 1%;
 	margin-left: 1%;
 	/*margin-right: 10px;
@@ -1583,46 +1583,46 @@ h4.js_heading a {
 	float: left;
 	margin-bottom: 20px;
 }
-#medium .module.m_width-75 {	/*  Summe + 2% Abstand muss immer 100% ergeben!  */
+.medium .module.m_width-75 {	/*  Summe + 2% Abstand muss immer 100% ergeben!  */
 	width: 74.5%;
 	/*width: -webkit-calc(75% - 10px);
     	width: -moz-calc(75% - 10px);
     	width: calc(75% - 10px);*/
 }
-#medium .module.m_width-66 {
+.medium .module.m_width-66 {
 	width: 66%;
 	/*width: -webkit-calc(66.66% - 10px);
     	width: -moz-calc(66.66% - 10px);
     	width: calc(66.66% - 10px);*/
 }
-#medium .module.m_width-50 {
+.medium .module.m_width-50 {
 	width: 49%;
 	/*width: -webkit-calc(50% - 10px);
     	width: -moz-calc(50% - 10px);
     	width: calc(50% - 10px);*/
 }
-#medium .module.m_width-33 {
+.medium .module.m_width-33 {
 	width: 32%;
 	/*width: -webkit-calc(33.33% - 20px*2/3);
     	width: -moz-calc(33.33% - 20px*2/3);
     	width: calc(33.33% - 20px*2/3);*/
 }
-#medium .module.m_width-25 {
+.medium .module.m_width-25 {
 	width: 23.5%;
 	/*width: -webkit-calc(25% - 20px*3/4);
     	width: -moz-calc(25% - 20px*3/4);
     	width: calc(25% - 20px*3/4);*/
 }
-#medium .module.m_width-20 {
+.medium .module.m_width-20 {
 	width: 18.4%;
 	/*width: -webkit-calc(20% - 20px*4/5);
     	width: -moz-calc(20% - 20px*4/5);
     	width: calc(20% - 20px*4/5);*/
 }
-#medium .module.m_width-75:first-child, #medium .module.m_width-66:first-child, #medium .module.m_width-50:first-child, #medium .module.m_width-33:first-child, #medium .module.m_width-25:first-child, #medium .module.m_width-20:first-child {
+.medium .module.m_width-75:first-child, .medium .module.m_width-66:first-child, .medium .module.m_width-50:first-child, .medium .module.m_width-33:first-child, .medium .module.m_width-25:first-child, .medium .module.m_width-20:first-child {
 	margin-left: 0 !important;
 }
-#medium .module.m_width-75:last-child, #medium .module.m_width-66:last-child, #medium .module.m_width-50:last-child, #medium .module.m_width-33:last-child, #medium .module.m_width-25:last-child, #medium .module.m_width-20:last-child {
+.medium .module.m_width-75:last-child, .medium .module.m_width-66:last-child, .medium .module.m_width-50:last-child, .medium .module.m_width-33:last-child, .medium .module.m_width-25:last-child, .medium .module.m_width-20:last-child {
 	float: right;
 	margin-right: 0 !important;
 }
@@ -2454,7 +2454,7 @@ ul.textresizer a:hover {
 ul.textresizer .small-text {
 	font-size: 87.5%;
 }
-ul.textresizer .medium-text {
+ul.textresizer .default-text {
 	font-size: 100%;
 }
 ul.textresizer .large-text {
