@@ -38,12 +38,36 @@ $sitetitle = $this->params->get('sitetitle');
 $twitterid = $this->params->get('twitterid');
 $googleplus = $this->params->get('googleplus');
 $analytics = $this->params->get('analytics');
+$anonym = $this->params->get('anonym');
 $maxwidth = $this->params->get('maxwidth');
-$gridsort = $this->params->get('gridsort');
 $typesize = $this->params->get('typesize');
 $slidethumb = $this->params->get('slidethumb');
-$anonym = $this->params->get('anonym');
 ?>
+<?php // a little grid sort stuff
+$gridsort = $this->params->get('gridsort'); ?>
+<?php if ($this->countModules('left or left_hide or left_tabs or left_slider') and $this->countModules('right or right_hide or right_tabs or right_slider')): ?>
+	<?php if ($gridsort == 'lmr'): ?>
+	<?php $mainpos = 'grid_6 push_3 alpha';
+	      $leftpos = 'grid_3 pull_6';
+	      $rightpos = 'grid_3 omega'; ?>
+	<?php elseif ($gridsort == 'mlr'): ?>
+	<?php $mainpos = 'grid_6 alpha';
+	      $leftpos = 'grid_3';
+	      $rightpos = 'grid_3 omega'; ?>
+	<?php elseif ($gridsort == 'lrm'): ?>
+	<?php $mainpos = 'grid_6 push_6 alpha';
+	      $leftpos = 'grid_3 pull_6';
+	      $rightpos = 'grid_3 pull_6 omega'; ?>
+	<?php endif; ?>
+<?php elseif ($this->countModules('right or right_hide or right_tabs or right_slider')): ?>
+	<?php $mainpos = 'grid_8 alpha';
+	      $rightpos = 'grid_4 omega'; ?>
+<?php elseif ($this->countModules('left or left_hide or left_tabs or left_slider')): ?>
+	<?php $mainpos = 'grid_8 push_4 alpha';
+	      $leftpos = 'grid_4 pull_8 omega'; ?>
+<?php else : ?>
+	<?php $mainpos = 'grid_12 alpha omega'; ?>
+<?php endif;?>
 
 <!DOCTYPE html>
 <!-- ...Modernisierungen... -->
@@ -267,109 +291,30 @@ function myCallback(i) {
 		<?php endif; ?>
 		<?php endif; ?>
 		<!-- 3 bzw 2 columns with left + content + right / + message above content -->
-		<?php if ($this->countModules('left or left_hide or left_tabs or left_slider') and $this->countModules('right or right_hide or right_tabs or right_slider')): ?>
-		<?php if ($gridsort == 'lmr'):?>
-		<section class="grid_12">
-			<section class="grid_6 push_3 alpha" id="main" >
-				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<jdoc:include type="modules" name="bottom_tabs" style="beezTabs" headerLevel="2"  id="6" />
-			</section>
-			<aside class="grid_3 pull_6" id="left" >
-				<jdoc:include type="modules" name="left_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="left" style="joomskeleton" />
-				<jdoc:include type="modules" name="left_tabs" style="beezTabs" headerLevel="2"  id="3" />
-				<jdoc:include type="modules" name="left_slider" style="slider" />
-			</aside>
-			<aside class="grid_3 omega" id="right" >
-				<jdoc:include type="modules" name="right_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="right" style="joomskeleton" />
-				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
-				<jdoc:include type="modules" name="right_slider" style="slider" />
-			</aside>
-		</section>
-		<?php elseif ($gridsort == 'mlr'):?>
-		<section class="grid_12">
-			<section class="grid_6 alpha" id="main" >
-				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<jdoc:include type="modules" name="bottom_tabs" style="beezTabs" headerLevel="2"  id="6" />
-			</section>
-			<aside class="grid_3" id="left" >
-				<jdoc:include type="modules" name="left_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="left" style="joomskeleton" />
-				<jdoc:include type="modules" name="left_tabs" style="beezTabs" headerLevel="2"  id="3" />
-				<jdoc:include type="modules" name="left_slider" style="slider" />
-			</aside>
-			<aside class="grid_3 omega" id="right" >
-				<jdoc:include type="modules" name="right_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="right" style="joomskeleton" />
-				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
-				<jdoc:include type="modules" name="right_slider" style="slider" />
-			</aside>
-		</section>
-		<?php elseif ($gridsort == 'lrm'):?>
-		<section class="grid_12">
-			<section class="grid_6 push_6 alpha" id="main" >
-				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<jdoc:include type="modules" name="bottom_tabs" style="beezTabs" headerLevel="2"  id="6" />
-			</section>
-			<aside class="grid_3 pull_6" id="left" >
-				<jdoc:include type="modules" name="left_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="left" style="joomskeleton" />
-				<jdoc:include type="modules" name="left_tabs" style="beezTabs" headerLevel="2"  id="3" />
-				<jdoc:include type="modules" name="left_slider" style="slider" />
-			</aside>
-			<aside class="grid_3 pull_6 omega" id="right" >
-				<jdoc:include type="modules" name="right_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="right" style="joomskeleton" />
-				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
-				<jdoc:include type="modules" name="right_slider" style="slider" />
-			</aside>
-		</section>
-		<?php endif; ?>
-		<?php elseif ($this->countModules('right or right_hide or right_tabs or right_slider')): ?>
-		<section class="grid_12" >
-			<section class="grid_8 alpha" id="main" >
-				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<jdoc:include type="modules" name="bottom_tabs" style="beezTabs" headerLevel="2"  id="6" />
-			</section>
-			<aside class="grid_4 omega" id="right" >
-				<jdoc:include type="modules" name="right_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="right" style="joomskeleton"  />
-				<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
-				<jdoc:include type="modules" name="right_slider" style="slider" />
-			</aside>
-		</section>
-		<?php elseif ($this->countModules('left or left_hide or left_tabs or left_slider')): ?>
-		<section class="grid_12">
-			<section class="grid_8 push_4 alpha" id="main" >
-				<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<jdoc:include type="modules" name="bottom_tabs" style="beezTabs" headerLevel="2"  id="6" />
-			</section>
-			<aside class="grid_4 pull_8 omega" id="left" >
-				<jdoc:include type="modules" name="left_hide" style="beezHide" headerLevel="4" state="0"  />
-				<jdoc:include type="modules" name="left" style="joomskeleton" />
-				<jdoc:include type="modules" name="left_tabs" style="beezTabs" headerLevel="2"  id="3" />
-				<jdoc:include type="modules" name="left_slider" style="slider" />
-			</aside>
-		</section>
-		<?php else : ?>
 		<section class="grid_12" id="main" >
+		<section class="<?php echo htmlspecialchars($mainpos); ?>" id="main" >
 			<jdoc:include type="modules" name="head_tabs" style="beezTabs" headerLevel="2"  id="5" />
 			<jdoc:include type="message" />
 			<jdoc:include type="component" />
 			<jdoc:include type="modules" name="bottom_tabs" style="beezTabs" headerLevel="2"  id="6" />
 		</section>
+		<?php if ($this->countModules('left or left_hide or left_tabs or left_slider')): ?>
+		<aside class="<?php echo htmlspecialchars($leftpos); ?>" id="left" >
+			<jdoc:include type="modules" name="left_hide" style="beezHide" headerLevel="4" state="0"  />
+			<jdoc:include type="modules" name="left" style="joomskeleton" />
+			<jdoc:include type="modules" name="left_tabs" style="beezTabs" headerLevel="2"  id="3" />
+			<jdoc:include type="modules" name="left_slider" style="slider" />
+		</aside>
 		<?php endif; ?>
+		<?php if ($this->countModules('right or right_hide or right_tabs or right_slider')): ?>
+		<aside class="<?php echo htmlspecialchars($rightpos); ?>" id="right" >
+			<jdoc:include type="modules" name="right_hide" style="beezHide" headerLevel="4" state="0"  />
+			<jdoc:include type="modules" name="right" style="joomskeleton" />
+			<jdoc:include type="modules" name="right_tabs" style="beezTabs" headerLevel="2"  id="4" />
+			<jdoc:include type="modules" name="right_slider" style="slider" />
+		</aside>
+		<?php endif; ?>
+		</section>
 		<!-- head1 + head2 + head3  content first in mobile mode -->
 		<?php if ($layout == 'mobile'):?>
 		<?php if ($this->countModules('head1') or $this->countModules('head2') or $this->countModules('head3')): ?>
