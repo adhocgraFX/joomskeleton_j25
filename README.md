@@ -1,4 +1,4 @@
-JoomSkeleton 2.5 | responsive Joomla 2.5 template
+JoomSkeleton 2.5 | responsive Joomla! 2.5 template
 ================================================
 
 JoomSkeleton 2.5 template file v2.0 | 29.06. 2013
