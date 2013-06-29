@@ -4,7 +4,7 @@
  * @copyright	JoomSkeleton responsive template ©
  * @license		GNU/GPL
 **/
-defined( '_JEXEC' ) or die; 
+defined( '_JEXEC' ) or die;
 
 // variables
 $app = JFactory::getApplication();
@@ -24,7 +24,7 @@ $layout = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'mobile') : '
 $doc->addStyleSheet($tpath.'/css/template.css.php'); 
 
 // load this script
-$doc->addScript($tpath.'/js/modernizr-2.6.2.custom.min.js'); // <- Modernisierungen - this script must be in the head
+$doc->addScript($tpath.'/js/modernizr-2.6.2.custom.new.js'); // <- Modernisierungen - this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests
 unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
@@ -83,6 +83,10 @@ $gridsort = $this->params->get('gridsort'); ?>
 <head>
 <!-- my scripts -->
 <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php'; ?>"></script>
+<?php if ($layout != 'mobile'):?>
+    <script type="text/javascript" src="<?php echo $tpath.'/js/template.desktop.js.php'; ?>"></script>
+<?php endif; ?>
+
 <jdoc:include type="head" />
 
 <!-- Mobile Specific Metas -->
@@ -100,7 +104,7 @@ include_once ('css/styles_css.php'); ?>
 <!-- adaptive 960 CSS grid system von Nathan Smith -->
 <!-- hier: Geschmackssache, entweder desktop oder mobile first -->
 <noscript>
-<link rel="stylesheet" href="<?php echo $tpath; ?>/css/960.min.css" />
+    <link rel="stylesheet" href="<?php echo $tpath; ?>/css/960.min.css" />
 </noscript>
 <script>
 var ADAPT_CONFIG = {
@@ -393,9 +397,9 @@ function myCallback(i) {
 		<?php if ($twitterid or $googleplus == 1): ?>
 		<div class="grid_6 omega" id="buttons-pad">
 			<?php if ($twitterid): ?>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="<?php echo htmlspecialchars($twitterid);?>" data-size="large" data-hashtags="JoomSkeleton">Tweet</a> 
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			<?php endif; ?>
+			    <a href="https://twitter.com/share" class="twitter-share-button" data-via="<?php echo htmlspecialchars($twitterid);?>" data-size="large" data-hashtags="JoomSkeleton">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <?php endif; ?>
 			<?php if ($googleplus == 1): ?>
 			<!-- Google +1-Schaltfläche -->
 			<g:plusone></g:plusone>
@@ -424,20 +428,26 @@ function myCallback(i) {
 
 <!-- BEEZ Tabs - Ideen und WAI ARIA von Angie Radtke --> 
 	var altopen='<?php echo JText::_('TPL_BEEZ5_ALTOPEN', true); ?>';
-      var altclose='<?php echo JText::_('TPL_BEEZ5_ALTCLOSE', true); ?>';
+    var altclose='<?php echo JText::_('TPL_BEEZ5_ALTCLOSE', true); ?>';
 	var bildauf='<?php echo $tpath; ?>/images/plus.png';
 	var bildzu='<?php echo $tpath; ?>/images/minus.png';
 
 <!-- google analytics id -->
 <?php if ($analytics != "UA-XXXXX-X"): ?>
-	var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],['_trackPageview']]; 
-	<?php if ($anonym == 1):?>
-		_gaq.push (['_gat._anonymizeIp']);
-	<?php endif; ?>
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '<?php echo htmlspecialchars($analytics); ?>']);
+    _gaq.push(['_trackPageview']);
+    <?php if ($anonym == 1):?>
+        _gaq.push (['_gat._anonymizeIp']);
+    <?php endif; ?>
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 <?php endif; ?>
 
-<!-- google Render-Anweisung --> 
+<!-- google Render-Anweisung -->
 <?php if ($googleplus == 1): ?>
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;

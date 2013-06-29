@@ -21,29 +21,32 @@
 	$headfont = $this->params->get('headfont');
 	$bodyfont = $this->params->get('bodyfont');
 ?>
+
 <?php if ($headfont != "default"): ?>
-<script src="http://use.edgefonts.net/<?php echo htmlspecialchars($headfont); ?>.js"></script>
+    <script src="http://use.edgefonts.net/<?php echo htmlspecialchars($headfont); ?>.js"></script>
 <?php endif;?>
 <?php if ($bodyfont != "default"): ?>
-<script src="http://use.edgefonts.net/<?php echo htmlspecialchars($bodyfont); ?>.js"></script>
+    <script src="http://use.edgefonts.net/<?php echo htmlspecialchars($bodyfont); ?>.js"></script>
 <?php endif;?>
+
 <style type="text/css">
 h1, h2, h3, h4, h5, h6, .module.m_style .module-title, .module-title, h4.js_heading, p.lead, p.dropcap2:first-letter, p.dropcap3:first-letter, blockquote {
- color: #<?php echo $headlineColor;
-?>;
+ color: #<?php echo $headlineColor;?>;
 }
-<?php if ($headfont):?>  h1, h2, h3, h4, h5, h6 {
- font-family: <?php echo htmlspecialchars($headfont);
-?>, 'OpenSansCond', Helvetica, Arial, sans-serif;
+<?php if ($headfont != "default"):?>
+h1, h2, h3, h4, h5, h6 {
+ font-family: <?php echo htmlspecialchars($headfont);?>, 'OpenSansCond', Helvetica, Arial, sans-serif;
 }
- <?php endif;
-?> body {
- color: #<?php echo $fontColor;
-?>;
- <?php if ($bodyfont): ?>  font-family: <?php echo htmlspecialchars($bodyfont);
-?>, 'PTSans', Helvetica, Arial, sans-serif;
- <?php endif;
-?>  <?php if ($bodybackground): ?>  background: url(<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($bodybackground);
+ <?php endif;?>
+
+body {
+ color: #<?php echo $fontColor;?>;
+
+<?php if ($bodyfont != "default"): ?>
+    font-family: <?php echo htmlspecialchars($bodyfont);?>, 'PTSans', Helvetica, Arial, sans-serif;
+<?php endif; ?>
+
+<?php if ($bodybackground): ?>  background: url(<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($bodybackground);
 ?>) center top no-repeat fixed;
  <?php else : ?>  background: #<?php echo $bodyColor;
 ?>;

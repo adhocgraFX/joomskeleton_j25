@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14216fa6-59ed-4b03-a521-fab583652162" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/template.desktop.js.php" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\spiegel_joomadhocgrafx\templates\joomskeleton_j25\js\modernizr-2.6.2.custom.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles_css.php" afterPath="$PROJECT_DIR$/css/styles_css.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/template.js.php" afterPath="$PROJECT_DIR$/js/template.js.php" />
+    </list>
+    <ignored path="joomskeleton_j25.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372525847957" ignored="false" />
+    <file path="$PROJECT_DIR$/../jfluid_j25/index.php" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372444864873" ignored="false" />
+    <file path="$PROJECT_DIR$/../jfluid_j25/js/template.desktop.js.php" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372436694717" ignored="false" />
+    <file path="$PROJECT_DIR$/../jfluid_j25/js/template.js.php" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372436713372" ignored="false" />
+    <file path="/index.php" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372518743907" ignored="false" />
+    <file path="$PROJECT_DIR$/../jfluid_j25/css/styles_css.php" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372519390071" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../joomla303/templates/jflex_j3/css/styles-css.php" changelist="14216fa6-59ed-4b03-a521-fab583652162" time="1372519890279" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="joomskeleton_j25" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="39.032257">
+              <folding>
+                <marker date="1372525903275" expanded="true" signature="5840:6583" placeholder="..." />
+                <marker date="1372525903275" expanded="true" signature="5861:6471" placeholder="{&quot;path&quot;: '&lt;?php echo $tpath; ?&gt;/css/'...}" />
+                <marker date="1372525903275" expanded="true" signature="5927:6026" placeholder="//..." />
+                <marker date="1372525903275" expanded="true" signature="6070:6182" placeholder="//..." />
+                <marker date="1372525903275" expanded="true" signature="6192:6469" placeholder="[...]" />
+                <marker date="1372525903275" expanded="true" signature="6496:6573" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.js.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/template.js.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="-19.161291">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.desktop.js.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/template.desktop.js.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="25" selection-start="945" selection-end="945" vertical-scroll-proportion="-12.774194">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles_css.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/styles_css.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.024704618">
+              <folding>
+                <marker date="1372520328386" expanded="true" signature="3875:5095" placeholder="..." />
+                <marker date="1372520328386" expanded="true" signature="3896:3922" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="3936:3963" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="3974:4001" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4051:4082" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4253:4283" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4570:4598" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4661:4692" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4757:4785" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4858:4888" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="4957:4985" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="5055:5086" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="5156:7339" placeholder="..." />
+                <marker date="1372520328386" expanded="true" signature="7312:7329" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7399:8144" placeholder="..." />
+                <marker date="1372520328386" expanded="true" signature="7416:7418" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7432:7434" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7453:7455" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7478:7480" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7498:7500" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7516:7518" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7537:7539" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7552:7554" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7566:7568" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7587:7589" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7611:7613" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7632:7634" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7654:7656" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7673:7675" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7693:7695" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7710:7712" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7733:7735" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7753:7755" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7775:7777" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7799:7801" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7822:7824" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7847:7849" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7871:7873" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7886:7888" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7902:7904" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7923:7925" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7950:7952" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="7974:7995" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="8016:8038" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="8069:8087" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="8117:8135" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="8204:8263" placeholder="..." />
+                <marker date="1372520328386" expanded="true" signature="8224:8226" placeholder="{...}" />
+                <marker date="1372520328386" expanded="true" signature="8251:8253" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/css/styles_css.php" />
+        <option value="$PROJECT_DIR$/js/template.desktop.js.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/js/template.js.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="." />
+      <path value="C:\xampp\php\PEAR" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-3" />
+    <option name="width" value="1924" />
+    <option name="height" value="1160" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="joomskeleton_j25" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="preferences.sourceCode.CSS" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PublishConfig" serverName="flex3" serverId="ea60764c-b590-4cff-8124-bee11d3b5490">
+    <servers>
+      <server id="ea60764c-b590-4cff-8124-bee11d3b5490">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="spiegel_joomadhocgrafx/templates/joomskeleton_j25" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\spiegel_joomadhocgrafx\templates\joomskeleton_j25\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14216fa6-59ed-4b03-a521-fab583652162" name="Default" comment="" />
+      <created>1372435264757</created>
+      <updated>1372435264757</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-3" y="0" width="1924" height="1160" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15306123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1372525903275" expanded="true" signature="5840:6583" placeholder="..." />
+            <marker date="1372525903275" expanded="true" signature="5861:6471" placeholder="{&quot;path&quot;: '&lt;?php echo $tpath; ?&gt;/css/'...}" />
+            <marker date="1372525903275" expanded="true" signature="5927:6026" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6070:6182" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6192:6469" placeholder="[...]" />
+            <marker date="1372525903275" expanded="true" signature="6496:6573" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.desktop.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles_css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1372520328386" expanded="true" signature="3875:5095" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="3896:3922" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="3936:3963" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="3974:4001" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4051:4082" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4253:4283" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4570:4598" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4661:4692" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4757:4785" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4858:4888" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4957:4985" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="5055:5086" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="5156:7339" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="7312:7329" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7399:8144" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="7416:7418" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7432:7434" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7453:7455" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7478:7480" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7498:7500" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7516:7518" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7537:7539" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7552:7554" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7566:7568" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7587:7589" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7611:7613" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7632:7634" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7654:7656" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7673:7675" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7693:7695" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7710:7712" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7733:7735" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7753:7755" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7775:7777" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7799:7801" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7822:7824" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7847:7849" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7871:7873" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7886:7888" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7902:7904" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7923:7925" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7950:7952" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7974:7995" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8016:8038" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8069:8087" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8117:8135" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8204:8263" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="8224:8226" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8251:8253" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1372525903275" expanded="true" signature="5840:6583" placeholder="..." />
+            <marker date="1372525903275" expanded="true" signature="5861:6471" placeholder="{&quot;path&quot;: '&lt;?php echo $tpath; ?&gt;/css/'...}" />
+            <marker date="1372525903275" expanded="true" signature="5927:6026" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6070:6182" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6192:6469" placeholder="[...]" />
+            <marker date="1372525903275" expanded="true" signature="6496:6573" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.desktop.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1372525903275" expanded="true" signature="5840:6583" placeholder="..." />
+            <marker date="1372525903275" expanded="true" signature="5861:6471" placeholder="{&quot;path&quot;: '&lt;?php echo $tpath; ?&gt;/css/'...}" />
+            <marker date="1372525903275" expanded="true" signature="5927:6026" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6070:6182" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6192:6469" placeholder="[...]" />
+            <marker date="1372525903275" expanded="true" signature="6496:6573" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.desktop.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.desktop.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="25" selection-start="945" selection-end="945" vertical-scroll-proportion="-12.774194">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template.js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="-19.161291">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="39.032257">
+          <folding>
+            <marker date="1372525903275" expanded="true" signature="5840:6583" placeholder="..." />
+            <marker date="1372525903275" expanded="true" signature="5861:6471" placeholder="{&quot;path&quot;: '&lt;?php echo $tpath; ?&gt;/css/'...}" />
+            <marker date="1372525903275" expanded="true" signature="5927:6026" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6070:6182" placeholder="//..." />
+            <marker date="1372525903275" expanded="true" signature="6192:6469" placeholder="[...]" />
+            <marker date="1372525903275" expanded="true" signature="6496:6573" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles_css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.024704618">
+          <folding>
+            <marker date="1372520328386" expanded="true" signature="3875:5095" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="3896:3922" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="3936:3963" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="3974:4001" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4051:4082" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4253:4283" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4570:4598" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4661:4692" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4757:4785" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4858:4888" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="4957:4985" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="5055:5086" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="5156:7339" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="7312:7329" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7399:8144" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="7416:7418" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7432:7434" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7453:7455" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7478:7480" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7498:7500" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7516:7518" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7537:7539" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7552:7554" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7566:7568" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7587:7589" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7611:7613" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7632:7634" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7654:7656" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7673:7675" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7693:7695" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7710:7712" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7733:7735" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7753:7755" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7775:7777" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7799:7801" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7822:7824" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7847:7849" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7871:7873" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7886:7888" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7902:7904" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7923:7925" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7950:7952" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="7974:7995" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8016:8038" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8069:8087" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8117:8135" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8204:8263" placeholder="..." />
+            <marker date="1372520328386" expanded="true" signature="8224:8226" placeholder="{...}" />
+            <marker date="1372520328386" expanded="true" signature="8251:8253" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
