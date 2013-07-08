@@ -82,9 +82,10 @@ $gridsort = $this->params->get('gridsort'); ?>
 
 <head>
 <!-- my scripts -->
-<script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php'; ?>"></script>
-<?php if ($layout != 'mobile'):?>
+<?php if ($layout == 'desktop'):?>
     <script type="text/javascript" src="<?php echo $tpath.'/js/template.desktop.js.php'; ?>"></script>
+<?php else :?>
+    <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php'; ?>"></script>
 <?php endif; ?>
 
 <jdoc:include type="head" />

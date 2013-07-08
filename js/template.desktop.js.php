@@ -22,6 +22,17 @@ $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s",time() + $offset) . " GMT";
 // send cache expiration header to broswer
 header($ExpStr);
 
+require('../../../media/system/js/mootools-core.js');
+require('../../../media/system/js/mootools-more.js');
+require('../../../media/system/js/core.js');
+require('../../../media/system/js/caption.js');
+
+require('hide.js');
+require('jquery-1.7.2.min.js');
+require('off-canvas.js');
+require('footable-0.1.js');
+require('jquery.smooth-scroll.js');
+
 require('responsiveslides.min.js');
 require('jquery.syncheight.js');
 require('jquery.cookie.js');
