@@ -199,12 +199,14 @@ function myCallback(i) {
 <!--	 äußerer Hauptrahmen	-->
 <div id="wrapper"> 
 	<!--	 off canvas navi	-->
+	<?php if ($layout == 'mobile'):?>
 	<nav id="navmenu">
 		<header>
 			<p><span class="icon-reorder" ></span>Go to...</p>
 		</header>
 		<jdoc:include type="modules" name="nav" />
 	</nav>
+	<?php endif; ?>
 	<!-- innerer Hauptrahmen  -->
 	<div class="container_12" id="main-pad"> 
 		<!-- navi + suche  -->
