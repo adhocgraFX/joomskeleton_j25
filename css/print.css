@@ -37,10 +37,14 @@ table {
 	page-break-inside: avoid;
 	max-width: 100% !important;
 }
+table > p {
+	text-indent: none !important;
+}
 img {
 	max-width: 100% !important;
 	height: auto !important;
 }
+
 /* TYPO */
 p + p {
 	text-indent: 1.6em
@@ -54,11 +58,12 @@ p, ul li {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'bitter', Helvetica, Arial, sans-serif;
-	line-height: 1.3;
+	line-height: 1.1;
 	color: #000;
 	background: none;
 	page-break-after: avoid;
 }
+
 /* typographic scale for headlines - look at indesign */
 h1 {
 	font-size: 24pt; 
