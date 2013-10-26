@@ -28,9 +28,13 @@ $doc->addScript($tpath.'/js/modernizr-2.6.2.custom.new.js'); // <- Modernisierun
 
 // unset scripts, put them into /js/template.js.php to minify http requests
 unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core-uncompressed.js']);
 unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more-uncompressed.js']);
 unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/core-uncompressed.js']);
 unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/caption-uncompressed.js']);
 
 // get my params
 $logo = $this->params->get('logo');
@@ -108,6 +112,7 @@ include_once ('css/styles_css.php'); ?>
 <noscript>
     <link rel="stylesheet" href="<?php echo $tpath; ?>/css/960.min.css" />
 </noscript>
+
 <script>
 var ADAPT_CONFIG = {
   // Where is your CSS?
@@ -422,6 +427,8 @@ function myCallback(i) {
 <!--	 wrapper	--> 
 <!-- debug -->
 <jdoc:include type="modules" name="debug" />
+
+<!-- my scripts -->
 <script type="text/javascript">
 <!-- smooth scroll -->	
 	$(document).ready(function() {
@@ -570,5 +577,6 @@ $(window).load(function(){
     $('.footable').footable();  	
   });
 </script>
+
 </body>
 </html>
